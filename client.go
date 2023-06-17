@@ -151,8 +151,16 @@ func (client *Client) IsHoliday(ctx context.Context, t time.Time) (bool, error) 
 	return h != nil, nil
 }
 
+func (client *Client) IsTodayHoliday(ctx context.Context) (bool, error) {
+	return client.IsHoliday(ctx, time.Now())
+}
+
 func (c *ClientWithoutContext) IsHoliday(t time.Time) (bool, error) {
 	return c.client.IsHoliday(context.Background(), t)
+}
+
+func (c *ClientWithoutContext) IsTodayHoliday() (bool, error) {
+	return c.client.IsTodayHoliday(context.Background())
 }
 
 ///////////////////////////////////////////////////////////////////////
