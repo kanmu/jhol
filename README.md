@@ -1,5 +1,7 @@
 # jhol
 
+[![test](https://github.com/winebarrel/jhol/actions/workflows/test.yml/badge.svg)](https://github.com/winebarrel/jhol/actions/workflows/test.yml)
+
 Go language library to check Japanese holidays using [Google Calendar](https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com).
 
 ## Preparation
