@@ -48,9 +48,21 @@ func main() {
 }
 ```
 
-## CLI
+## Limitation
 
-### Installation
+Google Calendar events are limited in duration. For example, as of today (Jun 17th, 2023) you cannot get public holidays prior to 2022.
+
+Check below command for details:
+
+```sh
+curl -s -H "X-goog-api-key: $GOOGLE_API_KEY" \
+  'https://www.googleapis.com/calendar/v3/calendars/ja.japanese%23holiday%40group.v.calendar.google.com/events?showDeleted=false&singleEvents=true&orderBy=startTime&timeMin=2019-01-01T00:00:00Z&maxResults=100' \
+  | jq -c '.items[] | {summary, start}'
+```
+
+# CLI
+
+## Installation
 
 ```
 brew install winebarrel/jhol/jhol
