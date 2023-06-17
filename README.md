@@ -71,7 +71,7 @@ brew install winebarrel/jhol/jhol
 ## Usage
 
 ```
-Usage: main --api-key=STRING <command>
+Usage: jhol --api-key=STRING <command>
 
 Flags:
   -h, --help              Show context-sensitive help.
