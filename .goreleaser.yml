@@ -18,3 +18,13 @@ brews:
     license: MIT
     install: |
       bin.install 'jhol'
+nfpms:
+  - file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Arch }}"
+    homepage: https://github.com/winebarrel/jhol
+    maintainer: Genki Sugawara <sugawara@winebarrel.jp>
+    description: CLI to display and check Japanese holidays.
+    license: MIT
+    formats:
+      - deb
+      - rpm
+    bindir: /usr/bin
