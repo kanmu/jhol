@@ -11,7 +11,7 @@ vet:
 
 .PHONY: lint
 lint:
-	golangci-lint run
+	golangci-lint run -E misspell,gofmt
 
 .PHONY: test
 test:
