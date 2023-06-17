@@ -9,7 +9,7 @@ import (
 )
 
 type IsHoliday struct {
-	Date string `arg:"" default:"" help:"Target date."`
+	Date string `arg:"" default:"" help:"Target date (default: today)."`
 }
 
 func (cmd *IsHoliday) Run(client *jhol.ClientWithoutContext) error {
