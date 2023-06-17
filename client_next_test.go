@@ -141,11 +141,6 @@ func TestClientNext(_t *testing.T) {
 	assert := assert.New(_t)
 	client := jhol.NewClient(TestGCalAPIKey)
 
-	type expectedHoliday struct {
-		expectedDate string
-		expectedName string
-	}
-
 	tests := []struct {
 		date         string
 		expectedDate string
