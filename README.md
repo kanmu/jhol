@@ -45,3 +45,44 @@ func main() {
 	fmt.Println(holidays) //=> [2023-07-17	海の日 2023-08-11	山の日]
 }
 ```
+
+## CLI
+
+### Installation
+
+```
+brew install winebarrel/jhol/jhol
+```
+
+## Usage
+
+```
+Usage: main --api-key=STRING <command>
+
+Flags:
+  -h, --help              Show context-sensitive help.
+      --version
+      --api-key=STRING    Google API Key ($GOOGLE_API_KEY)
+      --lang="ja"         Calendar language (ja, en).
+
+Commands:
+  next --api-key=STRING [<n>]
+    Show next holidays.
+
+  is-holiday --api-key=STRING [<date>]
+    Check whether the specified date is a holiday.
+
+Run "main <command> --help" for more information on a command.
+```
+
+```
+$ export GOOGLE_API_KEY=...
+
+$ jhol next
+2023-07-17	海の日
+2023-08-11	山の日
+2023-09-18	敬老の日
+
+$ jhol is-holiday 2023-07-17
+true
+```
