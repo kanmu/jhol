@@ -14,3 +14,5 @@ jobs:
         with:
           args: -E misspell,gofmt
       - run: make
+        env:
+          TEST_GCAL_API_KEY: ${{ secrets.TEST_GCAL_API_KEY }}
