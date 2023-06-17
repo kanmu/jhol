@@ -13,10 +13,6 @@ const (
 	JaJapaneseHolidayCalendar = "ja.japanese#holiday@group.v.calendar.google.com"
 )
 
-var (
-	DefaultMaxResults = 10
-)
-
 type Client struct {
 	APIKey     string
 	CalendarID string
@@ -127,15 +123,25 @@ func (client *Client) NextN(ctx context.Context, t time.Time, n int) ([]*Holiday
 	return holidays, nil
 }
 
-func (client *Client) Next(ctx context.Context, t time.Time) ([]*Holiday, error) {
-	return client.NextN(ctx, t, DefaultMaxResults)
+func (client *Client) Next(ctx context.Context, t time.Time) (*Holiday, error) {
+	holidays, err := client.NextN(ctx, t, 1)
+
+	if err != nil {
+		return nil, err
+	}
+
+	if len(holidays) == 0 {
+		return nil, nil
+	}
+
+	return holidays[0], nil
 }
 
 func (c *ClientWithoutContext) NextN(t time.Time, n int) ([]*Holiday, error) {
 	return c.client.NextN(context.Background(), t, n)
 }
 
-func (c *ClientWithoutContext) Next(t time.Time) ([]*Holiday, error) {
+func (c *ClientWithoutContext) Next(t time.Time) (*Holiday, error) {
 	return c.client.Next(context.Background(), t)
 }
 
