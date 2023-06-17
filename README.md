@@ -8,9 +8,9 @@ Go language library to check Japanese holidays using [Google Calendar](https://c
 
 ## Preparation
 
-1. Enable the API.
+1. Enable Google Calendar API.
     * https://developers.google.com/calendar/api/quickstart/go#enable_the_api
-1. Create an API Key.
+1. Create an Google API Key.
     * https://cloud.google.com/docs/authentication/api-keys#create
 
 ## Usage
