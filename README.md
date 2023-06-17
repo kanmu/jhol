@@ -86,7 +86,7 @@ Commands:
   is-holiday --api-key=STRING [<date>]
     Check whether the specified date is a holiday.
 
-Run "main <command> --help" for more information on a command.
+Run "jhol <command> --help" for more information on a command.
 ```
 
 ```
