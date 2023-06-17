@@ -42,6 +42,9 @@ func main() {
 	yes, _ := client.IsHoliday(date)
 	fmt.Println(yes) //=> true
 
+	h, _ = client.Next(date)
+	fmt.Println(h) //=> 2023-07-17	海の日
+
 	holidays, _ := client.NextN(date, 3)
 	fmt.Println(holidays) //=> [2023-07-17	海の日 2023-08-11	山の日 2023-09-18	敬老の日]
 
