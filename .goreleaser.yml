@@ -9,19 +9,19 @@ builds:
       - CGO_ENABLED=0
 checksum:
   name_template: "checksums.txt"
-# brews:
-#   - tap:
-#       owner: winebarrel
-#       name: homebrew-jhol
-#     homepage: https://github.com/kanmu/jhol
-#     description: CLI to display and check Japanese holidays.
-#     license: MIT
-#     install: |
-#       bin.install 'jhol'
+brews:
+  - tap:
+      owner: kanmu
+      name: homebrew-tools
+    homepage: https://github.com/kanmu/jhol
+    description: CLI to display and check Japanese holidays.
+    license: MIT
+    install: |
+      bin.install 'jhol'
 nfpms:
   - file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Arch }}"
     homepage: https://github.com/kanmu/jhol
-    maintainer: Genki Sugawara <sugawara@winebarrel.jp>
+    maintainer: Genki Sugawara <genki.sugawara@kanmu.co.jp>
     description: CLI to display and check Japanese holidays.
     license: MIT
     formats:
