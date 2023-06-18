@@ -14,7 +14,7 @@ func parseDate(s string) time.Time {
 }
 
 func main() {
-	apiKey := os.Getenv("GOOGLE_API_KEY")
+	apiKey := os.Getenv("JHOL_API_KEY")
 	client := jhol.NewClient(apiKey).WithoutContext()
 
 	date := parseDate("2023-07-17")
