@@ -65,7 +65,7 @@ Check below command for details:
 ```sh
 curl -s -H "X-goog-api-key: $JHOL_API_KEY" \
   'https://www.googleapis.com/calendar/v3/calendars/ja.japanese%23holiday%40group.v.calendar.google.com/events?showDeleted=false&singleEvents=true&orderBy=startTime&timeMin=2019-01-01T00:00:00Z&maxResults=100' \
-  | jq -c '.items[] | {summary, start}'
+  | jq -c '.items[] | {start, summary}'
 ```
 
 # CLI
