@@ -70,13 +70,11 @@ curl -s -H "X-goog-api-key: $GOOGLE_API_KEY" \
 
 # CLI
 
-<!--
 ## Installation
 
 ```
-brew install winebarrel/jhol/jhol
+brew install kanmu/tools/jhol
 ```
--->
 
 ## Usage
 
