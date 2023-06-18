@@ -79,8 +79,8 @@ func TestNextCmd_Format(_t *testing.T) {
 		return
 	}
 
-	assert.Equal(`2023-07-17(Mon)	海の日
-2023-08-11(Fri)	山の日
-2023-09-18(Mon)	敬老の日
+	assert.Equal(`2023/07/17(Mon)	海の日
+2023/08/11(Fri)	山の日
+2023/09/18(Mon)	敬老の日
 `, out.String())
 }
