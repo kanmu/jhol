@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/araddon/dateparse"
-	"github.com/winebarrel/jhol"
+	"github.com/kanmu/jhol"
 )
 
 type IsHoliday struct {

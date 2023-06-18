@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/winebarrel/jhol"
+	"github.com/kanmu/jhol"
 )
 
 func parseDate(s string) time.Time {

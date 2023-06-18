@@ -4,8 +4,8 @@ import (
 	"log"
 
 	"github.com/alecthomas/kong"
-	"github.com/winebarrel/jhol"
-	"github.com/winebarrel/jhol/cmd/subcmd"
+	"github.com/kanmu/jhol"
+	"github.com/kanmu/jhol/cmd/subcmd"
 )
 
 var version string
