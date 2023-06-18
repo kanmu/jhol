@@ -2,6 +2,8 @@ package main
 
 import (
 	"log"
+	"os"
+	"time"
 
 	"github.com/alecthomas/kong"
 	"github.com/kanmu/jhol"
@@ -38,7 +40,11 @@ func main() {
 	}
 
 	client := jhol.NewClientWithCalendar(cli.APIKey, calendarID).WithoutContext()
-	err := ctx.Run(client)
+	err := ctx.Run(&subcmd.Binds{
+		Client: client,
+		Out:    os.Stdout,
+		Now:    time.Now,
+	})
 
 	if err != nil {
 		log.Fatalln(err)

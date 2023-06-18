@@ -5,14 +5,14 @@ import (
 	"time"
 
 	"github.com/araddon/dateparse"
-	"github.com/kanmu/jhol"
 )
 
 type IsHoliday struct {
 	Date string `arg:"" default:"" help:"Target date (default: today)."`
 }
 
-func (cmd *IsHoliday) Run(client *jhol.ClientWithoutContext) error {
+func (cmd *IsHoliday) Run(binds *Binds) error {
+	client := binds.Client
 	var date time.Time
 
 	if cmd.Date != "" {
@@ -33,6 +33,7 @@ func (cmd *IsHoliday) Run(client *jhol.ClientWithoutContext) error {
 	}
 
 	fmt.Println(isHoliday)
+	fmt.Fprintln(binds.Out, isHoliday)
 
 	return nil
 }
