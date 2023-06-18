@@ -32,7 +32,7 @@ func parseDate(s string) time.Time {
 }
 
 func main() {
-	apiKey := os.Getenv("GOOGLE_API_KEY")
+	apiKey := os.Getenv("JHOL_API_KEY")
 	client := jhol.NewClient(apiKey).WithoutContext()
 
 	date := parseDate("2023-07-17")
@@ -63,7 +63,7 @@ Google Calendar events are limited in duration. For example, as of today (Jun 17
 Check below command for details:
 
 ```sh
-curl -s -H "X-goog-api-key: $GOOGLE_API_KEY" \
+curl -s -H "X-goog-api-key: $JHOL_API_KEY" \
   'https://www.googleapis.com/calendar/v3/calendars/ja.japanese%23holiday%40group.v.calendar.google.com/events?showDeleted=false&singleEvents=true&orderBy=startTime&timeMin=2019-01-01T00:00:00Z&maxResults=100' \
   | jq -c '.items[] | {summary, start}'
 ```
@@ -84,7 +84,7 @@ Usage: jhol --api-key=STRING <command>
 Flags:
   -h, --help              Show context-sensitive help.
       --version
-      --api-key=STRING    Google API Key ($GOOGLE_API_KEY)
+      --api-key=STRING    Google API Key ($JHOL_API_KEY)
       --lang="ja"         Calendar language (ja, en).
 
 Commands:
@@ -98,7 +98,7 @@ Run "jhol <command> --help" for more information on a command.
 ```
 
 ```
-$ export GOOGLE_API_KEY=...
+$ export JHOL_API_KEY=...
 
 $ jhol next
 2023-07-17	海の日
