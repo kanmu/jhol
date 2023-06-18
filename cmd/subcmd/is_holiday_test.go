@@ -17,7 +17,7 @@ func TestIsHolidayCmd_True(_t *testing.T) {
 	}
 
 	err := cmd.Run(&subcmd.Binds{
-		Client: Client,
+		Client: TestClient,
 		Out:    out,
 	})
 
@@ -37,7 +37,7 @@ func TestIsHolidayCmd_False(_t *testing.T) {
 	}
 
 	err := cmd.Run(&subcmd.Binds{
-		Client: Client,
+		Client: TestClient,
 		Out:    out,
 	})
 

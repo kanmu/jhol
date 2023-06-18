@@ -19,7 +19,7 @@ func TestNextCmd_3(_t *testing.T) {
 	}
 
 	err := cmd.Run(&subcmd.Binds{
-		Client: Client,
+		Client: TestClient,
 		Out:    out,
 		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
 	})
@@ -43,7 +43,7 @@ func TestNextCmd_5(_t *testing.T) {
 	}
 
 	err := cmd.Run(&subcmd.Binds{
-		Client: Client,
+		Client: TestClient,
 		Out:    out,
 		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
 	})
@@ -70,7 +70,7 @@ func TestNextCmd_Format(_t *testing.T) {
 	}
 
 	err := cmd.Run(&subcmd.Binds{
-		Client: Client,
+		Client: TestClient,
 		Out:    out,
 		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
 	})
