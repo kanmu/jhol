@@ -12,18 +12,21 @@ import (
 
 func TestNextCmd_3(_t *testing.T) {
 	assert := assert.New(_t)
+	out := &strings.Builder{}
 
 	cmd := &subcmd.Next{
 		N: 3,
 	}
 
-	out := &strings.Builder{}
-
-	cmd.Run(&subcmd.Binds{
+	err := cmd.Run(&subcmd.Binds{
 		Client: Client,
 		Out:    out,
 		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
 	})
+
+	if !assert.NoError(err) {
+		return
+	}
 
 	assert.Equal(`2023-07-17	海の日
 2023-08-11	山の日
@@ -33,18 +36,21 @@ func TestNextCmd_3(_t *testing.T) {
 
 func TestNextCmd_5(_t *testing.T) {
 	assert := assert.New(_t)
+	out := &strings.Builder{}
 
 	cmd := &subcmd.Next{
 		N: 5,
 	}
 
-	out := &strings.Builder{}
-
-	cmd.Run(&subcmd.Binds{
+	err := cmd.Run(&subcmd.Binds{
 		Client: Client,
 		Out:    out,
 		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
 	})
+
+	if !assert.NoError(err) {
+		return
+	}
 
 	assert.Equal(`2023-07-17	海の日
 2023-08-11	山の日
