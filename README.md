@@ -107,4 +107,14 @@ $ jhol next
 
 $ jhol is-holiday 2023-07-17
 true
+
+$ jhol is-holiday # today
+false
+
+$ jhol next 5 -f '%Y/%m/%d(%a)'
+2023/07/17(Mon)	海の日
+2023/08/11(Fri)	山の日
+2023/09/18(Mon)	敬老の日
+2023/09/23(Sat)	秋分の日
+2023/10/09(Mon)	スポーツの日
 ```

@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	Client *jhol.ClientWithoutContext
+	TestClient *jhol.ClientWithoutContext
 )
 
 func TestMain(m *testing.M) {
@@ -20,7 +20,7 @@ func TestMain(m *testing.M) {
 		panic("$TEST_GCAL_API_KEY is empty")
 	}
 
-	Client = jhol.NewClient(apiKey).WithoutContext()
+	TestClient = jhol.NewClient(apiKey).WithoutContext()
 
 	m.Run()
 }
