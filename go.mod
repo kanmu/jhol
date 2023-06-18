@@ -1,4 +1,4 @@
-module github.com/winebarrel/jhol
+module github.com/kanmu/jhol
 
 go 1.20
 

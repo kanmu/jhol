@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/kanmu/jhol"
 	"github.com/stretchr/testify/assert"
-	"github.com/winebarrel/jhol"
 )
 
 func TestHolidayString(t *testing.T) {

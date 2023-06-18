@@ -1,8 +1,8 @@
 # jhol
 
-[![test](https://github.com/winebarrel/jhol/actions/workflows/test.yml/badge.svg)](https://github.com/winebarrel/jhol/actions/workflows/test.yml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/winebarrel/jhol.svg)](https://pkg.go.dev/github.com/winebarrel/jhol)
-[![Go Report Card](https://goreportcard.com/badge/github.com/winebarrel/jhol)](https://goreportcard.com/report/github.com/winebarrel/jhol)
+[![test](https://github.com/kanmu/jhol/actions/workflows/test.yml/badge.svg)](https://github.com/kanmu/jhol/actions/workflows/test.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/kanmu/jhol.svg)](https://pkg.go.dev/github.com/kanmu/jhol)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kanmu/jhol)](https://goreportcard.com/report/github.com/kanmu/jhol)
 
 Go language library to check Japanese holidays using [Google Calendar](https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com).
 
@@ -23,7 +23,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/winebarrel/jhol"
+	"github.com/kanmu/jhol"
 )
 
 func parseDate(s string) time.Time {
@@ -70,11 +70,13 @@ curl -s -H "X-goog-api-key: $GOOGLE_API_KEY" \
 
 # CLI
 
+<!--
 ## Installation
 
 ```
 brew install winebarrel/jhol/jhol
 ```
+-->
 
 ## Usage
 

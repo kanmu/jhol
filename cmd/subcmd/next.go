@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/winebarrel/jhol"
+	"github.com/kanmu/jhol"
 )
 
 type Next struct {

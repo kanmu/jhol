@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/kanmu/jhol/internal/util"
 	"github.com/stretchr/testify/assert"
-	"github.com/winebarrel/jhol/internal/util"
 )
 
 func TestTimeZoneName(_t *testing.T) {
