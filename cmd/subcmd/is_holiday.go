@@ -32,7 +32,6 @@ func (cmd *IsHoliday) Run(binds *Binds) error {
 		return err
 	}
 
-	fmt.Println(isHoliday)
 	fmt.Fprintln(binds.Out, isHoliday)
 
 	return nil
