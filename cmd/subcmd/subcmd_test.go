@@ -1,7 +1,6 @@
 package subcmd_test
 
 import (
-	"fmt"
 	"os"
 	"testing"
 
@@ -13,7 +12,6 @@ var (
 )
 
 func TestMain(m *testing.M) {
-	fmt.Print("xx")
 	apiKey := os.Getenv("TEST_GCAL_API_KEY")
 
 	if apiKey == "" {

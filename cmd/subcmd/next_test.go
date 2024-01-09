@@ -8,10 +8,12 @@ import (
 	"github.com/araddon/dateparse"
 	"github.com/kanmu/jhol/cmd/subcmd"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestNextCmd_3(_t *testing.T) {
 	assert := assert.New(_t)
+	require := require.New(_t)
 	out := &strings.Builder{}
 
 	cmd := &subcmd.Next{
@@ -21,21 +23,20 @@ func TestNextCmd_3(_t *testing.T) {
 	err := cmd.Run(&subcmd.Binds{
 		Client: TestClient,
 		Out:    out,
-		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
+		Now:    func() time.Time { return dateparse.MustParse("2024-07-15") },
 	})
 
-	if !assert.NoError(err) {
-		return
-	}
+	require.NoError(err)
 
-	assert.Equal(`2023-07-17	海の日
-2023-08-11	山の日
-2023-09-18	敬老の日
+	assert.Equal(`2024-07-15	海の日
+2024-08-11	山の日
+2024-08-12	休日 山の日
 `, out.String())
 }
 
 func TestNextCmd_5(_t *testing.T) {
 	assert := assert.New(_t)
+	require := require.New(_t)
 	out := &strings.Builder{}
 
 	cmd := &subcmd.Next{
@@ -45,23 +46,22 @@ func TestNextCmd_5(_t *testing.T) {
 	err := cmd.Run(&subcmd.Binds{
 		Client: TestClient,
 		Out:    out,
-		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
+		Now:    func() time.Time { return dateparse.MustParse("2024-07-15") },
 	})
 
-	if !assert.NoError(err) {
-		return
-	}
+	require.NoError(err)
 
-	assert.Equal(`2023-07-17	海の日
-2023-08-11	山の日
-2023-09-18	敬老の日
-2023-09-23	秋分の日
-2023-10-09	スポーツの日
+	assert.Equal(`2024-07-15	海の日
+2024-08-11	山の日
+2024-08-12	休日 山の日
+2024-09-16	敬老の日
+2024-09-22	秋分の日
 `, out.String())
 }
 
 func TestNextCmd_Format(_t *testing.T) {
 	assert := assert.New(_t)
+	require := require.New(_t)
 	out := &strings.Builder{}
 
 	cmd := &subcmd.Next{
@@ -72,15 +72,13 @@ func TestNextCmd_Format(_t *testing.T) {
 	err := cmd.Run(&subcmd.Binds{
 		Client: TestClient,
 		Out:    out,
-		Now:    func() time.Time { return dateparse.MustParse("2023-07-17") },
+		Now:    func() time.Time { return dateparse.MustParse("2024-07-15") },
 	})
 
-	if !assert.NoError(err) {
-		return
-	}
+	require.NoError(err)
 
-	assert.Equal(`2023/07/17(Mon)	海の日
-2023/08/11(Fri)	山の日
-2023/09/18(Mon)	敬老の日
+	assert.Equal(`2024/07/15(Mon)	海の日
+2024/08/11(Sun)	山の日
+2024/08/12(Mon)	休日 山の日
 `, out.String())
 }
