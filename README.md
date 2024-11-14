@@ -4,7 +4,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/kanmu/jhol.svg)](https://pkg.go.dev/github.com/kanmu/jhol)
 [![Go Report Card](https://goreportcard.com/badge/github.com/kanmu/jhol)](https://goreportcard.com/report/github.com/kanmu/jhol)
 
-Go language library to check Japanese holidays using [Google Calendar](https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com).
+Go language library to check Japanese holidays using [NAOJ Calendar](https://calendar.google.com/calendar/embed?src=2bk907eqjut8imoorgq1qa4olc%40group.calendar.google.com).
 
 ## Preparation
 
@@ -85,7 +85,6 @@ Flags:
   -h, --help              Show context-sensitive help.
       --version
       --api-key=STRING    Google API Key ($JHOL_API_KEY)
-      --lang="ja"         Calendar language (ja, en).
 
 Commands:
   next --api-key=STRING [<n>]
