@@ -3,9 +3,9 @@ module github.com/kanmu/jhol
 go 1.20
 
 require (
-	github.com/alecthomas/kong v0.9.0
+	github.com/alecthomas/kong v1.4.0
 	github.com/araddon/dateparse v0.0.0-20210429162001-6b43995a97de
-	github.com/lestrrat-go/strftime v1.0.6
+	github.com/lestrrat-go/strftime v1.1.0
 	github.com/stretchr/testify v1.9.0
 	google.golang.org/api v0.163.0
 )
@@ -23,7 +23,6 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.2 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.0 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.47.0 // indirect
