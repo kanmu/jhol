@@ -6,6 +6,12 @@
 
 Go language library to check Japanese holidays using [NAOJ Calendar](https://calendar.google.com/calendar/embed?src=2bk907eqjut8imoorgq1qa4olc%40group.calendar.google.com).
 
+```sh
+curl -s -H "X-goog-api-key: $JHOL_API_KEY" \
+  'https://www.googleapis.com/calendar/v3/calendars/2bk907eqjut8imoorgq1qa4olc%40group.calendar.google.com/events?showDeleted=false&singleEvents=true&orderBy=startTime&timeMin=2019-01-01T00:00:00Z&maxResults=100' \
+  | jq -c '.items[] | {start, summary}'
+```
+
 ## Preparation
 
 1. Enable Google Calendar API.
@@ -54,18 +60,6 @@ func main() {
 	holidays, _ = client.Between(date, parseDate("2023-08-11"))
 	fmt.Println(holidays) //=> [2023-07-17	海の日 2023-08-11	山の日]
 }
-```
-
-## Limitation
-
-Google Calendar events are limited in duration. For example, as of today (Jun 17th, 2023) you cannot get public holidays prior to 2022.
-
-Check below command for details:
-
-```sh
-curl -s -H "X-goog-api-key: $JHOL_API_KEY" \
-  'https://www.googleapis.com/calendar/v3/calendars/ja.japanese%23holiday%40group.v.calendar.google.com/events?showDeleted=false&singleEvents=true&orderBy=startTime&timeMin=2019-01-01T00:00:00Z&maxResults=100' \
-  | jq -c '.items[] | {start, summary}'
 ```
 
 # CLI
