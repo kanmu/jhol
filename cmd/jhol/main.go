@@ -33,8 +33,6 @@ func main() {
 		kong.Vars{"version": version},
 	)
 
-	var calendarID string
-
 	client := jhol.NewClientWithCalendar(cli.APIKey, calendarID).WithoutContext()
 	err := ctx.Run(&subcmd.Binds{
 		Client: client,
