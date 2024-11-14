@@ -30,7 +30,7 @@ func TestNextCmd_3(_t *testing.T) {
 
 	assert.Equal(`2024-07-15	海の日
 2024-08-11	山の日
-2024-08-12	休日 山の日
+2024-08-12	休日
 `, out.String())
 }
 
@@ -53,7 +53,7 @@ func TestNextCmd_5(_t *testing.T) {
 
 	assert.Equal(`2024-07-15	海の日
 2024-08-11	山の日
-2024-08-12	休日 山の日
+2024-08-12	休日
 2024-09-16	敬老の日
 2024-09-22	秋分の日
 `, out.String())
@@ -79,6 +79,6 @@ func TestNextCmd_Format(_t *testing.T) {
 
 	assert.Equal(`2024/07/15(Mon)	海の日
 2024/08/11(Sun)	山の日
-2024/08/12(Mon)	休日 山の日
+2024/08/12(Mon)	休日
 `, out.String())
 }

@@ -9,8 +9,7 @@ import (
 )
 
 const (
-	EnJapaneseHolidayCalendar = "en.japanese#holiday@group.v.calendar.google.com"
-	JaJapaneseHolidayCalendar = "ja.japanese#holiday@group.v.calendar.google.com"
+	JaJapaneseHolidayCalendar = "2bk907eqjut8imoorgq1qa4olc@group.calendar.google.com"
 )
 
 type Client struct {
