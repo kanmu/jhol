@@ -9,7 +9,7 @@ require (
 	github.com/araddon/dateparse v0.0.0-20210429162001-6b43995a97de
 	github.com/lestrrat-go/strftime v1.1.0
 	github.com/stretchr/testify v1.9.0
-	google.golang.org/api v0.205.0
+	google.golang.org/api v0.206.0
 )
 
 require (
