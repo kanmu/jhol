@@ -20,7 +20,7 @@ jobs:
         with:
           go-version-file: go.mod
           cache: false
-      - uses: golangci/golangci-lint-action@v6
+      - uses: golangci/golangci-lint-action@v7
       - run: make
         env:
           TEST_GCAL_API_KEY: ${{ secrets.TEST_GCAL_API_KEY }}
