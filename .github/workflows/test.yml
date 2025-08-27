@@ -15,12 +15,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
           cache: false
-      - uses: golangci/golangci-lint-action@v6
+      - uses: golangci/golangci-lint-action@v8
       - run: make
         env:
           TEST_GCAL_API_KEY: ${{ secrets.TEST_GCAL_API_KEY }}
