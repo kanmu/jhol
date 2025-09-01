@@ -8,7 +8,7 @@ require (
 	github.com/alecthomas/kong v1.12.1
 	github.com/araddon/dateparse v0.0.0-20210429162001-6b43995a97de
 	github.com/lestrrat-go/strftime v1.1.1
-	github.com/stretchr/testify v1.11.0
+	github.com/stretchr/testify v1.11.1
 	google.golang.org/api v0.248.0
 )
 
