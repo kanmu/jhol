@@ -19,7 +19,7 @@ jobs:
           app-id: 244816
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
           owner: kanmu
-      - uses: goreleaser/goreleaser-action@v6
+      - uses: goreleaser/goreleaser-action@v7
         with:
           distribution: goreleaser
           version: '~> v2'
