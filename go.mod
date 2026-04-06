@@ -3,11 +3,11 @@ module github.com/kanmu/jhol
 go 1.25.0
 
 require (
-	github.com/alecthomas/kong v1.14.0
+	github.com/alecthomas/kong v1.15.0
 	github.com/araddon/dateparse v0.0.0-20210429162001-6b43995a97de
 	github.com/lestrrat-go/strftime v1.1.1
 	github.com/stretchr/testify v1.11.1
-	google.golang.org/api v0.273.0
+	google.golang.org/api v0.274.0
 )
 
 require (
